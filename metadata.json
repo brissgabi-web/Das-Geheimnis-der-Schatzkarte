@@ -1,0 +1,6 @@
+{
+  "name": "Das Geheimnis der Schatzkarte",
+  "description": "Kalandos oktatójáték magyar gimnazistáknak: A1–A2 szintű német nyelvgyakorlás a Schule und Freizeit témakörben.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

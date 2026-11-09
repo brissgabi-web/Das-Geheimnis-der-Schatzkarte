@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'EB Garamond', 'Playfair Display', serif, system-ui;
+    --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-fantasy: 'MedievalSharp', cursive, serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #ede7db;
+    color: #2b1d14;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-fantasy {
+    font-family: var(--font-fantasy);
+  }
+}
+
+/* Parchment and map styling utilities */
+.parchment-bg {
+  background-color: #fbf5e8;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.4) 0%, transparent 80%),
+    radial-gradient(circle at 10% 20%, rgba(184, 144, 88, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(138, 90, 43, 0.12) 0%, transparent 40%);
+  box-shadow: inset 0 0 40px rgba(115, 65, 20, 0.2), 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.parchment-card {
+  background: linear-gradient(135deg, #fffcf5 0%, #f7edd8 100%);
+  border: 2px solid #d4b483;
+  box-shadow: 0 4px 15px rgba(80, 45, 15, 0.12);
+}
+
+.parchment-border {
+  border-color: #c89d61;
+}
+
+/* Subtle antique paper texture overlay using SVG data URI */
+.bg-map-pattern {
+  background-color: #1f140e;
+  background-image: radial-gradient(#3d2716 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #ecdcc3;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: #a3723a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7d5121;
+}
+
+/* Animations */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 60s linear infinite;
+}
+
+.custom-parchment-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-parchment-scroll::-webkit-scrollbar-track {
+  background: rgba(140, 88, 37, 0.15);
+  border-radius: 4px;
+}
+.custom-parchment-scroll::-webkit-scrollbar-thumb {
+  background: rgba(140, 88, 37, 0.5);
+  border-radius: 4px;
+}
+.custom-parchment-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(140, 88, 37, 0.8);
+}
+
